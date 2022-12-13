@@ -1,0 +1,17 @@
+.financeInput {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: black;
+    color: gray;
+    transition: 0.3s;
+}
+
+.financeInput:hover {
+    background-color: gray;
+    color: white;
+}
+
+.financeInput:focus {
+    outline: 0;
+}

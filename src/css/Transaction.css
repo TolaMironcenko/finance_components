@@ -1,0 +1,17 @@
+.transaction-item {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    justify-content: space-between;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.income {
+    background-color: rgba(100, 200, 125, 0.6);
+}
+
+.consuption {
+    background-color: rgba(200, 100, 100, 0.6);
+}

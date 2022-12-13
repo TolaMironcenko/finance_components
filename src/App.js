@@ -1,23 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import './css/App.css';
+import Balance from './components/Balance';
+import Transaction from './components/Transaction';
+import Input from './components/Input/Input';
+import Button from './components/Button/Button';
 
 function App() {
+
+  const transactions = [
+    {'sum': 100, 'category': 'mom', 'time': "19.06.2002 17:22"}, 
+    {'sum': -100, 'category': 'mom', 'time': "19.06.2002 17:22"},
+    {'sum': 19800, 'category': 'mom', 'time': "19.06.2002 17:22"},
+    {'sum': -1340, 'category': 'mom', 'time': "19.06.2002 17:22"},
+    {'sum': 100, 'category': 'mom', 'time': "19.06.2002 17:22"},
+    {'sum': 100, 'category': 'mom', 'time': "19.06.2002 17:22"},
+    {'sum': 100, 'category': 'mom', 'time': "19.06.2002 17:22"},
+    {'sum': 100, 'category': 'mom', 'time': "19.06.2002 17:22"},
+    {'sum': 100, 'category': 'mom', 'time': "19.06.2002 17:22"},
+    {'sum': 100, 'category': 'mom', 'time': "19.06.2002 17:22"},
+    {'sum': 100, 'category': 'mom', 'time': "19.06.2002 17:22"},
+    {'sum': 100, 'category': 'mom', 'time': "19.06.2002 17:22"},
+    {'sum': 100, 'category': 'mom', 'time': "19.06.2002 17:22"},
+    {'sum': 100, 'category': 'mom', 'time': "19.06.2002 17:22"},
+    {'sum': 100, 'category': 'mom', 'time': "19.06.2002 17:22"}
+  ]
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Balance balance={1000}/>
+      <Input/>
+      <Button>button</Button>
+      <div className={'transactions'}>
+      {
+        transactions.map((transaction, id) => {
+          return(
+            <Transaction
+              sum={transaction.sum}
+              category={transaction.category}
+              time={transaction.time}
+            />
+          )
+        })
+      }
+      </div>
     </div>
   );
 }

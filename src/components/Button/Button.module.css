@@ -1,0 +1,14 @@
+.financeButton {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: black;
+    color: gray;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.financeButton:hover {
+    background-color: gray;
+    color: white;
+}
